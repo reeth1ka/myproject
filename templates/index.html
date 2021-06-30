@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title %}Home {% endblock title %}
+{% block body %}
+<div class="container mx-1">
+<h3>Send me a message!</h3>
+<form method="post" action="">
+{% csrf_token %}
+<div class="mb-3">
+    <label for="message" class="form-label">Message</label>
+    <textarea type="text" class="form-control" id="messagebox" name="message" rows="3"></textarea>
+  </div>
+  <button class="btn btn-primary" type="submit">Send</button>
+</div>
+</form>
+{% endblock body %}
+
